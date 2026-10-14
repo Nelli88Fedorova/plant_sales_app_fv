@@ -1,17 +1,68 @@
-# plant_app_flutter_01
+# Plant Sales App (Flutter)
 
-A new Flutter project.
+Мобильное приложение для продаж средств защиты растений (СЗР). 
+Переписано с Python/Kivy на Flutter для Android.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## ✅ Реализовано
 
-A few resources to get you started if this is your first Flutter project:
+### Общее
+- [x] Трёхвкладочная навигация (Диагностика / Каталог / Настройки)
+- [x] Сборка APK под Android
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+### База данных
+- [x] Локальное хранилище SQLite (`sqflite`)
+- [x] Модель `Product` с полями: название, категория, состав, производитель, упаковка, норма расхода, цена
+- [x] CRUD-операции через `DatabaseHelper`
+- [x] Очистка базы данных с подтверждением
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Каталог
+- [x] Список препаратов с прокруткой
+- [x] Поиск по названию и составу
+- [x] Фильтр по категориям (чипсы)
+- [x] Разворачивающиеся карточки с деталями
+- [x] Отображение первого действующего вещества (ДВ) на карточке
+- [x] Форматирование нормы расхода с единицами измерения
+
+### Импорт из Excel
+- [x] Выбор `.xlsx` / `.xls` файлов
+- [x] Диалог выбора листов
+- [x] Автоопределение формата (прайс-лист / экспортированный каталог)
+- [x] Поиск колонок по ключевым словам
+- [x] Обработка дублирующихся колонок
+- [x] Валидация строк с отчётом по ошибкам
+- [x] Статистика по каждому листу
+
+## 🚧 В разработке / запланировано
+
+### Работа с фото и нейросети
+- [ ] Съёмка фото с камеры
+- [ ] Выбор фото из галереи
+- [ ] Интеграция ONNX-моделей для диагностики болезней растений
+- [ ] Отображение результатов распознавания
+
+### Данные
+- [ ] Импорт описаний препаратов (культуры, болезни)
+- [ ] Обновление существующих препаратов из Excel
+- [ ] Экспорт каталога в Excel
+- [ ] Шаблоны импорта
+
+### Прочее
+- [ ] Интеграция с заказами и клиентами
+
+
+## 🛠️ Технологии
+
+- **Flutter** 3.x / Dart 3.x
+- **sqflite** — локальная база данных
+- **excel** — чтение Excel-файлов
+- **file_picker** — выбор файлов
+
+
+## 📱 Скриншоты
+
+| Диагностика | Каталог | Настройки |
+|:---:|:---:|:---:|
+| ![Диагностика](screenshots/diagnosis.png) | ![Каталог](screenshots/catalog.png) | ![Настройки](screenshots/settings.png) |
+
+<img width="298" height="494" alt="Рисунок2" src="https://github.com/user-attachments/assets/e9fe4cf8-0943-4448-808a-5876452a24b5" />
